@@ -1,0 +1,111 @@
+.site-header {
+    border-bottom: 1px solid #ececec;
+}
+
+.flex-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-family: $secondFontFamily;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.78px;
+    color: #000000;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingFunсtion;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+
+    span {
+        color: $accentColor;
+    }
+}
+
+.nav-list {
+    display: flex;
+    margin-left: 93px;
+
+
+    &__item:not(:first-child) {
+        margin-left: 52px;
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        letter-spacing: 0.28px;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: $timingFunсtion;
+    }
+
+    &__link.current {
+        color: $accentColor;
+        cursor: default;
+    }
+
+    &__link::after {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $accentColor;
+        border-radius: 2px;
+        content: "";
+        opacity: 0;
+        transition-duration: 250ms;
+        transition-timing-function: $timingFunсtion;
+    }
+
+    &__link.current::after {
+        opacity: 1;
+        transition-duration: 250ms;
+        transition-timing-function: $timingFunсtion;
+    }
+}
+
+.contact-list {
+    display: flex;
+    margin-left: auto;
+
+
+    &__item:not(:first-child) {
+        margin-left: 30px;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.28px;
+        font-weight: 500;
+        color: $primaryTextColor;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: $timingFunсtion;
+    }
+
+    &__link:hover,
+    .contact-list__link:focus {
+        color: $accentColor;
+    }
+
+    &__icon {
+        margin-right: 10px;
+        fill: currentColor;
+    }
+}

@@ -1,0 +1,35 @@
+.section.features {
+    padding-bottom: 0;
+}
+
+.features-list {
+    display: flex;
+
+    &__item {
+        width: 270px;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 270px;
+        height: 120px;
+        margin-bottom: 30px;
+        border-radius: 4px;
+        background-color: $secondBgColor;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+    }
+}

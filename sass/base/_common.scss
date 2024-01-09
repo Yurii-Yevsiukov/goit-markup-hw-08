@@ -1,0 +1,78 @@
+body {
+    font-family: $primaryFontFamily;
+    color: $primaryTextColor;
+    background-color: $primaryBgColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.section {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.text {
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.42px;
+    color: $primaryTextColor;
+}
+
+.title {
+    text-align: center;
+    color: $secondTextColor;
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: $secondTextColor;
+
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+}
+
+.button {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.63;
+    letter-spacing: 0.48px;
+    color: $secondTextColor;
+    background-color: $secondBgColor;
+    border-radius: 4px;
+    cursor: pointer;
+
+
+    &:hover,
+    &:focus {
+        color: $primaryBgColor;
+        background-color: $accentColor;
+    }
+}

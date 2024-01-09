@@ -1,0 +1,139 @@
+.site-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #2f303a;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logo-footer {
+    display: block;
+    margin-bottom: 20px;
+    color: $primaryBgColor;
+}
+
+.communication-list {
+
+    &__item:not(:last-child) {
+        margin-bottom: 7px;
+    }
+}
+
+.communication-list__address,
+.communication-list__mail,
+.communication-list__tel {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.42px;
+    font-style: normal;
+    font-weight: 400;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingFunсtion;
+}
+
+.communication-list__address {
+    color: $primaryBgColor;
+}
+
+.footer-socials{
+
+    .social-list__link {
+        fill: $primaryBgColor;
+        background-color: rgba(255, 255, 255, 0.1);
+    
+        &:hover,
+        &:focus {
+            background-color: $accentColor;
+        }
+    }
+}
+
+.footer-socials__text,
+.footer-subscribe__text {
+    margin-bottom: 20px;
+    color: $primaryBgColor;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
+
+.footer-subscribe {
+
+    &__text {
+        display: block;
+        cursor: pointer;
+}
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: row;
+
+    &__input {
+        width: 358px;
+        height: 50px;
+        display: inline-flex;
+        justify-content: center;
+        padding: 15px 16px;
+        align-items: center;
+        color: $primaryBgColor;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: rgba(33, 150, 243, 0);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        outline: none;
+        transition-property: border-color;
+        transition-duration: 250ms;
+        transition-timing-function: $timingFunсtion;
+    }
+
+        &__input:focus {
+            border-color: $accentColor;
+        }
+
+    .subscribe-input[placeholder] {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.25;
+        letter-spacing: 0.48px;
+    }
+}
+
+.subscribe-button {
+    margin-left: 12px;
+    width: 200px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $primaryBgColor;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.875;
+    letter-spacing: 0.96px;
+    background-color: $accentColor;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingFunсtion;
+
+    &:hover,
+    &:focus {
+        background-color: #188ce8;
+    }
+
+    &__icon {
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,34 @@
+.employment-title,
+.team-title,
+.clients-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1.08px;
+}
+
+.employment-list {
+    display: flex;
+
+    &__item {
+        position: relative;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        color: $primaryBgColor;
+        text-align: center;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+}
