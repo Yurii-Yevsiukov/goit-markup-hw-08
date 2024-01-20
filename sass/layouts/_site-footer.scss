@@ -4,10 +4,12 @@
     background-color: #2f303a;
 }
 
-.flex-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+.footer-contacts {
+    text-align: center;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
 }
 
 .logo-footer {
@@ -16,41 +18,32 @@
     color: $primaryBgColor;
 }
 
-.communication-list {
-
-    &__item:not(:last-child) {
-        margin-bottom: 7px;
-    }
+.communication-list__item:not(:last-child) {
+    margin-bottom: 7px;
 }
 
-.communication-list__address,
-.communication-list__mail,
-.communication-list__tel {
+.communication-list__link {
     color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
-    line-height: 1.714;
-    letter-spacing: 0.42px;
+    @include fonts(14px, 400, 1.714, 0.42px);
     font-style: normal;
-    font-weight: 400;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: $timingFunсtion;
+
+    &--white {
+        color: $primaryBgColor;
+    }
 }
 
-.communication-list__address {
-    color: $primaryBgColor;
-}
+.footer-socials {
+    text-align: center;
 
-.footer-socials{
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
 
-    .social-list__link {
-        fill: $primaryBgColor;
-        background-color: rgba(255, 255, 255, 0.1);
-    
-        &:hover,
-        &:focus {
-            background-color: $accentColor;
-        }
+    @media screen and (min-width: 1200px) {
+        text-align: left;
     }
 }
 
@@ -58,69 +51,77 @@
 .footer-subscribe__text {
     margin-bottom: 20px;
     color: $primaryBgColor;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.42px;
+    @include fonts(14px, 700, 1.15, 0.42px);
     text-transform: uppercase;
 }
 
+.social-list__link-footer {
+    fill: $primaryBgColor;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    &:hover,
+    &:focus {
+        background-color: $accentColor;
+    }
+}
+
 .footer-subscribe {
-
-    &__text {
-        display: block;
-        cursor: pointer;
-}
+    text-align: center;
 }
 
-.subscribe-form {
-    display: flex;
-    flex-direction: row;
+.footer-subscribe__text {
+    display: block;
+    cursor: pointer;
+}
 
-    &__input {
-        width: 358px;
-        height: 50px;
-        display: inline-flex;
-        justify-content: center;
-        padding: 15px 16px;
-        align-items: center;
-        color: $primaryBgColor;
-        border-radius: 4px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        background-color: rgba(33, 150, 243, 0);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-        cursor: pointer;
-        outline: none;
-        transition-property: border-color;
-        transition-duration: 250ms;
-        transition-timing-function: $timingFunсtion;
+.subscribe-form__input {
+    margin-bottom: 20px;
+    padding: 15px 16px;
+    width: 358px;
+    height: 50px;
+    color: $primaryBgColor;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
+    background-color: rgba(33, 150, 243, 0);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingFunсtion;
+
+    @media screen and (max-width: 435px) {
+        width: 300px;
     }
 
-        &__input:focus {
-            border-color: $accentColor;
-        }
+    @media screen and (max-width: 340px) {
+        width: 275px;
+    }
 
-    .subscribe-input[placeholder] {
+    &::placeholder {
         color: rgba(255, 255, 255, 0.6);
         font-size: 16px;
-        font-weight: 400;
         line-height: 1.25;
         letter-spacing: 0.48px;
     }
 }
 
+.subscribe-form__input:focus {
+    border-color: $accentColor;
+}
+
 .subscribe-button {
     margin-left: 12px;
+    padding: 10px 28px;
     width: 200px;
     height: 50px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     color: $primaryBgColor;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.875;
-    letter-spacing: 0.96px;
+    @include fonts(16px, 700, 1.875, 0.96px);
     background-color: $accentColor;
+    border: $accentColor;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     cursor: pointer;
@@ -135,5 +136,66 @@
 
     &__icon {
         margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer-subscribe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subscribe-form__input {
+        display: block;
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .footer-contacts {
+        text-align: left;
+    }
+
+    .footer-subscribe__text {
+        display: block;
+        text-align: left;
+    }
+
+    .footer-subscribe {
+        display: flex;
+        flex-direction: column;
+        margin-left: 93px;
+        text-align: left;
+    }
+
+    .subscribe-form__input {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 12px;
+        width: 358px;
+    }
+}
+
+.contacts-socials-wrap {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-grow: 2;
     }
 }

@@ -8,3 +8,11 @@ $timingFunсtion: cubic-bezier(0.4, 0, 0.2, 1);
 
 $primaryFontFamily: Roboto, sans-serif;
 $secondFontFamily: Raleway, sans-serif;
+
+
+@mixin fonts ($fs, $fw, $lh, $ls) {
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+}

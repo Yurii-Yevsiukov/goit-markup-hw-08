@@ -24,8 +24,25 @@
     <!-- === Хедер сайту === -->
     <header class="site-header">
       <div class="container flex-wrap">
+        <a class="link logo header-logo" href="./index.html"
+          ><span>Web</span>Studio</a
+        >
+        <button
+          class="open-burger-btn js-open-menu"
+          type="button"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <svg class="open-burger-btn__burger-icon" width="40" height="40">
+            <!-- <use href="./img/burger-menu.svg"></use> -->
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8 14.6667V12H32V14.6667H8ZM8 21.3333H32V18.6667H8V21.3333ZM8 28H32V25.3333H8V28Z"
+            />
+          </svg>
+        </button>
         <nav class="nav">
-          <a class="link logo" href="./index.html"><span>Web</span>Studio</a>
           <ul class="list nav-list">
             <li class="item nav-list__item">
               <a class="link nav-list__link" href="./index.html">Студія</a>
@@ -59,6 +76,74 @@
             >
           </li>
         </ul>
+      </div>
+
+      <!-- === Мобільне меню === -->
+
+      <div class="burger-menu js-menu-container" id="mobile-menu">
+        <div class="container mobile-menu__container">
+          <button class="burger-menu__close_btn js-close-menu">
+            <svg class="burger-menu__svg" width="40" height="40">
+              <!-- <use href="./img/close-menu.svg"></use> -->
+              <path
+                d="M29.6667 12.88L27.7867 11L20.3333 18.4533L12.88 11L11 12.88L18.4533 20.3333L11 27.7867L12.88 29.6667L20.3333 22.2133L27.7867 29.6667L29.6667 27.7867L22.2133 20.3333L29.6667 12.88Z"
+              />
+            </svg>
+          </button>
+          <div class="burger-menu-wrapper">
+            <nav class="nav-burger-menu">
+              <ul class="list burger-nav-list">
+                <li class="burger-nav-list__marker-list">
+                  <a class="burger-nav-list__link current" href="./index.html"
+                    >Студия</a
+                  >
+                </li>
+                <li class="burger-nav-list__marker-list">
+                  <a class="burger-nav-list__link" href="./porfolio.html"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="burger-nav-list__marker-list">
+                  <a class="burger-nav-list__link" href="./contacts.html"
+                    >Контакты</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <address>
+              <ul class="list burger-adress-list">
+                <li class="burger-adress-list__item">
+                  <a
+                    class="burger-adress-list__adress-link"
+                    href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+                <li class="burger-adress-list__item">
+                  <a
+                    class="burger-adress-list__mail-link"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="list burger-social-link-list">
+                <li class="burger-social-link-list__item">
+                  <a class="burger-social-link-list__link" href="">Instagram</a>
+                </li>
+                <li class="burger-social-link-list__item">
+                  <a class="burger-social-link-list__link" href="">Twitter</a>
+                </li>
+                <li class="burger-social-link-list__item">
+                  <a class="burger-social-link-list__link" href="">Facebook</a>
+                </li>
+                <li class="burger-social-link-list__item">
+                  <a class="burger-social-link-list__link" href="">LinkedIn</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -103,7 +188,11 @@
             <li class="item portfolio-list__item">
               <a class="portfolio-list__link" href="">
                 <div class="portfolio-list__thumb">
-                  <img src="./img/tehnokriak.jpg" alt="Технокряк" width="370" />
+                  <img
+                    src="./img/portfolio/tehnokriak-desk.jpg"
+                    alt="Технокряк"
+                    width="370"
+                  />
                   <div class="portfolio-list__thumb-overlay">
                     <div class="portfolio-list__thumb-text">
                       <p>
@@ -126,7 +215,7 @@
               <a class="portfolio-list__link" href="">
                 <div class="portfolio-list__thumb">
                   <img
-                    src="./img/neworlean.jpg"
+                    src="./img/portfolio/neworlean-desk.jpg"
                     alt="Постер New Orlean vs Golden Star"
                     width="370"
                   />
@@ -154,7 +243,7 @@
               <a class="portfolio-list__link" href="">
                 <div class="portfolio-list__thumb">
                   <img
-                    src="./img/seafood.jpg"
+                    src="./img/portfolio/seafood-desk.jpg"
                     alt="Ресторан Seafood"
                     width="370"
                   />
@@ -179,7 +268,11 @@
             <li class="item portfolio-list__item">
               <a class="portfolio-list__link" href="">
                 <div class="portfolio-list__thumb">
-                  <img src="./img/prime.jpg" alt="Проєкт Prime" width="370" />
+                  <img
+                    src="./img/portfolio/prime-desk.jpg"
+                    alt="Проєкт Prime"
+                    width="370"
+                  />
                   <div class="portfolio-list__thumb-overlay">
                     <div class="portfolio-list__thumb-text">
                       <p>
@@ -201,7 +294,11 @@
             <li class="item portfolio-list__item">
               <a class="portfolio-list__link" href="">
                 <div class="portfolio-list__thumb">
-                  <img src="./img/boxes.jpg" alt="Проєкт Boxes" width="370" />
+                  <img
+                    src="./img/portfolio/boxes-desk.jpg"
+                    alt="Проєкт Boxes"
+                    width="370"
+                  />
                   <div class="portfolio-list__thumb-overlay">
                     <div class="portfolio-list__thumb-text">
                       <p>
@@ -224,7 +321,7 @@
               <a class="portfolio-list__link" href="">
                 <div class="portfolio-list__thumb">
                   <img
-                    src="./img/inspiration.jpg"
+                    src="./img/portfolio/inspiration-desk.jpg"
                     alt="Inspiration has no Borders"
                     width="370"
                   />
@@ -252,7 +349,7 @@
               <a class="portfolio-list__link" href="">
                 <div class="portfolio-list__thumb">
                   <img
-                    src="./img/limited.jpg"
+                    src="./img/portfolio/limited-desk.jpg"
                     alt="Видання Limited Edition"
                     width="370"
                   />
@@ -279,7 +376,11 @@
             <li class="item portfolio-list__item">
               <a class="portfolio-list__link" href="">
                 <div class="portfolio-list__thumb">
-                  <img src="./img/lab.jpg" alt="Проєкт LAB" width="370" />
+                  <img
+                    src="./img/portfolio/lab-desk.jpg"
+                    alt="Проєкт LAB"
+                    width="370"
+                  />
                   <div class="portfolio-list__thumb-overlay">
                     <div class="portfolio-list__thumb-text">
                       <p>
@@ -302,7 +403,7 @@
               <a class="portfolio-list__link" href="">
                 <div class="portfolio-list__thumb">
                   <img
-                    src="./img/growing.jpg"
+                    src="./img/portfolio/growing-desk.jpg"
                     alt="Growing Business"
                     width="370"
                   />

@@ -1,129 +1,138 @@
 .modal-title {
     margin-bottom: 12px;
-    color: $secondTextColor;
     text-align: center;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 0.6px;
+    color: $secondTextColor;
+    @include fonts(20px, 700, 1.5, 0.6px);
+
+    @media screen and (min-width: 1200px) {
+        line-height: 1.15;
+    }
 }
 
 .modal-form {
     display: flex;
     flex-direction: column;
+}
 
-    &__label {
-        margin-bottom: 4px;
-        color: $primaryTextColor;
-        font-size: 12px;
-        letter-spacing: 0.12px;
-        cursor: pointer;
-    }
+.modal-form-label {
+    margin-bottom: 4px;
+    color: $primaryTextColor;
+    @include fonts(12px, 400, 1.15, 0.12px);
+    cursor: pointer;
+}
 
-    &__input-container {
-        position: relative;
-        margin-bottom: 10px;
-    }
+.modal-form__input-container {
+    position: relative;
+    margin-bottom: 10px;
+}
 
-    &__input {
-        width: 100%;
-        height: 40px;
-        padding: 11px 12px 11px 40px;
-        border-radius: 4px;
-        border: 1px solid rgba(33, 33, 33, 0.2);
-        cursor: pointer;
-        outline: none;
-        transition-property: border-color;
-        transition-duration: 250ms;
-        transition-timing-function: $timingFunсtion;
-    }
+.modal-form__input {
+    width: 100%;
+    height: 40px;
+    padding: 11px 12px 11px 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    cursor: pointer;
+    outline: none;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingFunсtion;
 
-    &__input:focus {
+    &:focus {
         border-color: $accentColor;
     }
+}
 
-    &__input-svg {
-        position: absolute;
-        left: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        transition-property: fill;
-        transition-duration: 250ms;
-        transition-timing-function: $timingFunсtion;
-    }
+.modal-form__input-svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: $secondTextColor;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: $timingFunсtion;
 
-    &__input:focus + &__input-svg {
+    .modal-form__input:focus + & {
         fill: $accentColor;
     }
+}
 
-    &__feedback {
-        width: 100%;
-        height: 120px;
-        resize: none;
-        margin-bottom: 20px;
-        padding: 12px 16px;
-        font-size: 12px;
-        letter-spacing: 0.12px;
-        border-radius: 4px;
-        border: 1px solid rgba(33, 33, 33, 0.2);
-        outline: none;
-        transition-property: border-color;
-        transition-duration: 250ms;
-        transition-timing-function: $timingFunсtion;
-    }
+.modal-form__feedback {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    outline: none;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingFunсtion;
 
-    &__feedback:focus {
+    &:focus {
         border-color: $accentColor;
     }
 
-    &__terms-use {
-        display: flex;
-        align-items: center;
-        margin-bottom: 30px;
-        margin-left: 12px;
-        color: $primaryTextColor;
-        font-size: 14px;
-        line-height: 1.714;
-        letter-spacing: 0.42px;
-        cursor: pointer;
+    &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+        @include fonts(12px, 400, 1.15, 0.12px);        
+    }
+}
+
+.modal-form__agreement-wrap {
+    margin-bottom: 30px;
+}
+
+.modal-form__terms-use {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: $primaryTextColor;
+    @include fonts(12px, 400, 1.15, 0.36px);
+    cursor: pointer;
+
+    @media screen and (min-width: 1200px) {
+        @include fonts(14px, 400, 1.714, 0.42px);
     }
 
-    &__terms-use::before {
-        content: "";
+    &::before {
+        display: inline-block;
+        content: '';
         width: 16px;
         height: 15px;
         margin-right: 8px;
-        border: 2px solid $secondTextColor;
-        border-radius: 3px;
-    }
-
-    &__link {
-        color: $accentColor;
-        font-size: 14px;
-        line-height: 1.714;
-        letter-spacing: 0.42px;
-        text-decoration-line: underline;
-    }
-
-    &__agreement + .terms-use::before {
-        border-color: #000000;
-        transition-duration: 250ms;
-        transition-timing-function: $timingFunсtion;
-    }
-
-    &__agreement:hover + &__terms-use::before,
-    &__agreement:focus + &__terms-use::before {
-        border-color: $accentColor;
-    }
-
-    &__agreement:checked + &__terms-use::before {
-        border-color: $accentColor;
-        background-color: $accentColor;
-        background-image: url(../img/heck.svg);
+        border: 1px solid #000000;
+        background-image: url(../img/checkbox-icon.svg);
         background-repeat: no-repeat;
         background-position: center;
+        cursor: pointer;
         transition-property: border-color, background-color;
         transition-duration: 250ms;
         transition-timing-function: $timingFunсtion;
+
+        .modal-form__agreement:focus + & {
+            border-color: $accentColor;
+        }
+
+        .modal-form__agreement:checked + & {
+            background-color: $accentColor;
+        }
+    }
+}
+
+.modal-form__link {
+    color: $accentColor;
+    text-decoration: underline;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingFunсtion;
+
+    &:hover,
+    &:focus {
+        color: #188CE8;
+        text-decoration: none;
     }
 }
 
@@ -135,22 +144,18 @@
     width: 200px;
     height: 50px;
     color: $primaryBgColor;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.875;
-    letter-spacing: 0.96px;
+    @include fonts(16px, 700, 1.875, 0.96px);
     background-color: $accentColor;
     border-radius: 4px;
     border: transparent;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: $timingFunсtion;
 
-    &:hover,
-    &:focus {
+    &:focus,
+    &:hover {
         background-color: #188ce8;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
     }
 }
