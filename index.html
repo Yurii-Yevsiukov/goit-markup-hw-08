@@ -81,7 +81,6 @@
       </div>
 
       <!-- === Мобільне меню === -->
-
       <div class="burger-menu js-menu-container" id="mobile-menu">
         <div class="container mobile-menu__container">
           <button class="burger-menu__close_btn js-close-menu">
@@ -96,17 +95,19 @@
             <nav class="nav-burger-menu">
               <ul class="list burger-nav-list">
                 <li class="burger-nav-list__marker-list">
-                  <a class="burger-nav-list__link current" href="./index.html"
+                  <a
+                    class="link burger-nav-list__link current"
+                    href="./index.html"
                     >Студия</a
                   >
                 </li>
                 <li class="burger-nav-list__marker-list">
-                  <a class="burger-nav-list__link" href="./porfolio.html"
+                  <a class="link burger-nav-list__link" href="./portfolio.html"
                     >Портфолио</a
                   >
                 </li>
                 <li class="burger-nav-list__marker-list">
-                  <a class="burger-nav-list__link" href="./contacts.html"
+                  <a class="link burger-nav-list__link" href="./contacts.html"
                     >Контакты</a
                   >
                 </li>
@@ -116,14 +117,14 @@
               <ul class="list burger-adress-list">
                 <li class="burger-adress-list__item">
                   <a
-                    class="burger-adress-list__adress-link"
+                    class="link burger-adress-list__adress-link"
                     href="tel:+380961111111"
                     >+38 096 111 11 11</a
                   >
                 </li>
                 <li class="burger-adress-list__item">
                   <a
-                    class="burger-adress-list__mail-link"
+                    class="link burger-adress-list__mail-link"
                     href="mailto:info@devstudio.com"
                     >info@devstudio.com</a
                   >
@@ -131,16 +132,24 @@
               </ul>
               <ul class="list burger-social-link-list">
                 <li class="burger-social-link-list__item">
-                  <a class="burger-social-link-list__link" href="">Instagram</a>
+                  <a class="link burger-social-link-list__link" href=""
+                    >Instagram</a
+                  >
                 </li>
                 <li class="burger-social-link-list__item">
-                  <a class="burger-social-link-list__link" href="">Twitter</a>
+                  <a class="link burger-social-link-list__link" href=""
+                    >Twitter</a
+                  >
                 </li>
                 <li class="burger-social-link-list__item">
-                  <a class="burger-social-link-list__link" href="">Facebook</a>
+                  <a class="link burger-social-link-list__link" href=""
+                    >Facebook</a
+                  >
                 </li>
                 <li class="burger-social-link-list__item">
-                  <a class="burger-social-link-list__link" href="">LinkedIn</a>
+                  <a class="link burger-social-link-list__link" href=""
+                    >LinkedIn</a
+                  >
                 </li>
               </ul>
             </address>
@@ -492,7 +501,6 @@
                 />
                 <img src="./img/team/ermakov-mob.jpg" alt="фото Єрмаков" />
               </picture>
-
               <div class="team-list__description">
                 <h3 class="title team-list__title">Михайло Єрмаков</h3>
                 <p class="text team-list__text">UI Designer</p>
@@ -662,10 +670,10 @@
         </div>
 
         <div class="footer-subscribe">
-          <label class="footer-subscribe__text" for="footer-email"
-            >Підпишіться на розсилку</label
-          >
           <form class="subscribe-form" name="subscribe">
+            <label class="footer-subscribe__text" for="footer-email"
+              >Підпишіться на розсилку</label
+            >
             <input
               class="subscribe-form__input"
               id="footer-email"

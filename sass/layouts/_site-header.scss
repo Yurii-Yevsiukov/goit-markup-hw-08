@@ -77,7 +77,6 @@
         width: 100vw;
         height: 100vh;
         padding-bottom: 38px;
-        overflow: auto;
         background-color: $primaryBgColor;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
             0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -171,6 +170,10 @@
         @include fonts(34px, 500, 1.15, 0.68px);
         color: $accentColor;
         font-style: normal;
+
+        @media screen and (max-width: 479px) {
+            font-size: 28px;
+        }
     }
 
     .burger-adress-list__mail-link {

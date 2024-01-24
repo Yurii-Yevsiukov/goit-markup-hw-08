@@ -1,10 +1,11 @@
 .filter-list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 
     &__item:not(:last-child) {
         margin-right: 8px;
+        margin-bottom: 15px;
     }
 
     &__button {
@@ -20,94 +21,111 @@
         box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
             0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
     }
-}
 
-.portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-
-    &__item {
-        margin-right: 30px;
+    @media screen and (min-width: 768px) {
+        justify-content: center;
         margin-bottom: 30px;
     }
 
-    &__item:nth-child(3n) {
-        margin-right: 0;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
+}
+
+
+.portfolio-list {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
     }
 
-    &__item:nth-last-child(-n + 3) {
-        margin-bottom: 0;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.portfolio-list__item {
+    width: 100%;
+    outline: 1px solid #eeeeee;
+
+    @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
     }
 
-    &__link {
-        display: block;
-        text-decoration: none;
-        transition-property: box-shadow;
-        transition-duration: 250ms;
-        transition-timing-function: $timingFunсtion;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: calc((100% - 60px) / 2);
+        margin: 15px;
     }
 
-    &__link:hover,
-    &__link:focus {
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 60px) / 3);
+
+        &:not(:nth-child(3n)) {
+            margin-right: 30px;
+        }
+
+        &:not(:nth-last-child(-n + 3)) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.portfolio-list__link {
+    display: block;
+    width: 100%;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: $timingFunсtion;
+
+    &:hover,
+    &:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
             1px 4px 6px rgba(0, 0, 0, 0.16);
     }
+}
 
-    &__thumb {
-        position: relative;
-        overflow: hidden;
-    }
+.portfolio-list__thumb {
+    position: relative;
+    overflow: hidden;
+}
 
-    &__thumb-text {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 63px 24px;
-        height: 100%;
-        color: $primaryBgColor;
-        font-size: 18px;
-        line-height: 1.556;
-        letter-spacing: 0.54px;
+.portfolio-list__thumb-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    opacity: 0;
+    padding: 63px 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+    color: $primaryBgColor;
+    @include fonts(18px, 400, 1.556, 0.54px);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: $timingFunсtion;
+
+    .portfolio-list__link:hover &,
+    .portfolio-list__link:focus & {
         opacity: 1;
-    }
-
-    &__thumb-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(33, 150, 243, 0.9);
-        opacity: 1;
-        transform: translateY(100%);
-        transition-property: transform;
-        transition-duration: 250ms;
-        transition-timing-function: $timingFunсtion;
-    }
-
-    &__item:hover &__thumb-overlay {
         transform: translateY(0);
     }
+}
 
-    &__descr {
-        padding: 20px 24px;
-        border-right: 1px solid #eeeeee;
-        border-bottom: 1px solid #eeeeee;
-        border-left: 1px solid #eeeeee;
-    }
+.portfolio-list__descr {
+    padding: 20px 24px;
+}
 
-    &__title {
-        margin-bottom: 3px;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 2;
-        letter-spacing: 1.08px;
-        text-align: left;
-    }
+.portfolio-list__title {
+    margin-bottom: 4px;
+    text-align: left;
+    @include fonts(18px, 700, 2, 1.08px);
+}
 
-    &__text {
-        font-size: 16px;
-        line-height: 1.875;
-        letter-spacing: 0.48px;
-    }
+.portfolio-list__text {
+    @include fonts(16px, 400, 1.875, 0.48px);
 }

@@ -1,0 +1,66 @@
+.contacts-section {
+
+    &__list {
+        text-align: center;
+        color: $primaryTextColor;
+
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
+    }
+
+    &__item {
+        @media screen and (max-width: 767px) {
+            & + & {
+                margin-top: 10px;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            & + & {
+                margin-top: 12px;
+            }
+        }
+
+        & iframe {
+            width: 100%;
+            height: 500px;
+        }
+    }
+
+    &__link { 
+        color: inherit;
+        @include fonts(16px, 500, 1.15, 0.48px);
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: $timingFunсtion;
+
+        &:hover,
+        &:focus {
+            color: $accentColor;
+        }
+
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+        }
+    }
+
+    &__address-link {
+        display: block;
+        margin-bottom: 18px;
+        color: inherit;
+        @include fonts(16px, 500, 1.15, 0.48px);
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: $timingFunсtion;
+
+        &:hover,
+        &:focus {
+            color: $accentColor;
+        }
+
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+        }
+    }
+}

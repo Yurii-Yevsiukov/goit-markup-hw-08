@@ -26,7 +26,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 450px;
-    min-height: 609px;
+    height: 609px;
     padding: 40px;
     border-radius: 4px;
     background-color: $primaryBgColor;
@@ -35,6 +35,10 @@
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: $timingFunсtion;
+
+    @media screen and (max-width: 479px) {
+            width: 100%;            
+        }
 
     @media screen and (min-width: 1200px) {
         width: 528px;

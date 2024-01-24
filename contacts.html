@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebStudio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+
+  <body>
+    <!-- === Хедер сайту === -->
+    <header class="site-header">
+      <div class="container flex-wrap">
+        <a class="link logo header-logo" href="./index.html"
+          ><span>Web</span>Studio</a
+        >
+        <button
+          class="open-burger-btn js-open-menu"
+          type="button"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <svg class="open-burger-btn__burger-icon" width="40" height="40">
+            <!-- <use href="./img/burger-menu.svg"></use> -->
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8 14.6667V12H32V14.6667H8ZM8 21.3333H32V18.6667H8V21.3333ZM8 28H32V25.3333H8V28Z"
+            />
+          </svg>
+        </button>
+        <nav class="nav">
+          <ul class="list nav-list">
+            <li class="item nav-list__item">
+              <a class="link nav-list__link" href="./index.html">Студія</a>
+            </li>
+            <li class="item nav-list__item">
+              <a class="link nav-list__link" href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="item nav-list__item">
+              <a class="link nav-list__link current" href="./contacts.html"
+                >Контакти</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="list contact-list">
+          <li class="item contact-list__item">
+            <a class="link contact-list__link" href="mailto:info@devstudio.com">
+              <svg class="contact-list__icon" width="16" height="12">
+                <use href="./img/symbol-defs.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="item contact-list__item">
+            <a class="link contact-list__link" href="tel:+380961111111">
+              <svg class="contact-list__icon" width="10" height="16">
+                <use href="./img/symbol-defs.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- === Мобільне меню === -->
+      <div class="burger-menu js-menu-container" id="mobile-menu">
+        <div class="container mobile-menu__container">
+          <button class="burger-menu__close_btn js-close-menu">
+            <svg class="burger-menu__svg" width="40" height="40">
+              <!-- <use href="./img/close-menu.svg"></use> -->
+              <path
+                d="M29.6667 12.88L27.7867 11L20.3333 18.4533L12.88 11L11 12.88L18.4533 20.3333L11 27.7867L12.88 29.6667L20.3333 22.2133L27.7867 29.6667L29.6667 27.7867L22.2133 20.3333L29.6667 12.88Z"
+              />
+            </svg>
+          </button>
+          <div class="burger-menu-wrapper">
+            <nav class="nav-burger-menu">
+              <ul class="list burger-nav-list">
+                <li class="burger-nav-list__marker-list">
+                  <a class="link burger-nav-list__link" href="./index.html"
+                    >Студия</a
+                  >
+                </li>
+                <li class="burger-nav-list__marker-list">
+                  <a class="link burger-nav-list__link" href="./portfolio.html"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="burger-nav-list__marker-list">
+                  <a
+                    class="link burger-nav-list__link current"
+                    href="./contacts.html"
+                    >Контакты</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <address>
+              <ul class="list burger-adress-list">
+                <li class="burger-adress-list__item">
+                  <a
+                    class="link burger-adress-list__adress-link"
+                    href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+                <li class="burger-adress-list__item">
+                  <a
+                    class="link burger-adress-list__mail-link"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="list burger-social-link-list">
+                <li class="burger-social-link-list__item">
+                  <a class="link burger-social-link-list__link" href=""
+                    >Instagram</a
+                  >
+                </li>
+                <li class="burger-social-link-list__item">
+                  <a class="link burger-social-link-list__link" href=""
+                    >Twitter</a
+                  >
+                </li>
+                <li class="burger-social-link-list__item">
+                  <a class="link burger-social-link-list__link" href=""
+                    >Facebook</a
+                  >
+                </li>
+                <li class="burger-social-link-list__item">
+                  <a class="link burger-social-link-list__link" href=""
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- === Основний контент сторінки Контакти === -->
+    <main class="contacts-page">
+      <!-- === Контакти === -->
+
+      <section class="section contacts-section">
+        <div class="container">
+          <h1 class="visually-hidden">Контакти веб-студії</h1>
+          <ul class="list contacts-section__list">
+            <li class="contacts-section__item">
+              <a
+                class="link contacts-section__link"
+                href="mailto:info@devstudio.com"
+                >E-mail: info@devstudio.com</a
+              >
+            </li>
+            <li class="contacts-section__item">
+              <a class="link contacts-section__link" href="tel:+380961111111"
+                >Телефон: +38 096 111 11 11</a
+              >
+            </li>
+            <li class="contacts-section__item">
+              <a
+                class="link contacts-section__address-link"
+                href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Адреса: м.Київ, пр-т Лесі Українки, 26</a
+              >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2541.779449740656!2d30.5383858!3d50.4265807!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf0e033ecbe9%3A0x57a4dffefec77da0!2z0LHRg9C70YzQstCw0YAg0JvQtdGB0ZYg0KPQutGA0LDRl9C90LrQuCwgMjYsINCa0LjRl9CyLCDQo9C60YDQsNGX0L3QsCwgMDIwMDA!5e0!3m2!1suk!2spl!4v1669283216761!5m2!1suk!2spl"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- === Футер сайту === -->
+
+    <footer class="site-footer">
+      <div class="container flex-container">
+        <div class="contacts-socials-wrap">
+          <div class="footer-contacts">
+            <a class="link logo logo-footer" href="./index.html"
+              ><span>Web</span>Studio</a
+            >
+            <address>
+              <ul class="list communication-list">
+                <li class="item communication-list__item">
+                  <a
+                    class="link communication-list__link communication-list__link--white"
+                    href=""
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="item communication-list__item">
+                  <a
+                    class="link communication-list__link"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="item communication-list__item">
+                  <a
+                    class="link communication-list__link"
+                    href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="footer-socials">
+            <p class="footer-socials__text">приєднуйтесь</p>
+            <ul class="list social-list">
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link-footer" href="">
+                  <svg width="20" height="20">
+                    <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link-footer" href="">
+                  <svg width="20" height="20">
+                    <use href="./img/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link-footer" href="">
+                  <svg width="20" height="20">
+                    <use href="./img/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link-footer" href="">
+                  <svg width="20" height="20">
+                    <use href="./img/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-subscribe">
+          <form class="subscribe-form" name="subscribe">
+            <label class="footer-subscribe__text" for="footer-email"
+              >Підпишіться на розсилку</label
+            >
+            <input
+              class="subscribe-form__input"
+              id="footer-email"
+              name="email"
+              type="email"
+              placeholder="E-mail"
+            />
+            <button class="subscribe-button" type="submit">
+              Підписатися
+              <svg class="subscribe-button__icon" width="24" height="24">
+                <use href="./img/symbol-defs.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
+  </body>
+</html>
